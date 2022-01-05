@@ -1,5 +1,9 @@
 <odoo>
     <data>
+        <record model = "course.model" id = "course_demo">
+          <field name = "title">Python</field>
+          <field name = "description">Python Course></field>
+        </record>
 <!--
           <record id="object0" model="openacademy.openacademy">
             <field name="name">Object 0</field>
