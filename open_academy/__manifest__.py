@@ -8,7 +8,7 @@
     'description': """
         Odoo training
     """,
-
+    "application": True,
     'author': "Odoo Community Association (OCA)",
     'website': "https://github.com/rolandojduartem/OpenAcademy",
 
