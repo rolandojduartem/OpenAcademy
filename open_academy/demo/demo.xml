@@ -1,17 +1,15 @@
 <odoo>
     <data>
         <record model = "course.model" id = "course_demo">
+          <field name = "name">Courses</field>
+          <field name="res_model">course.model</field>
+          <field name="view_mode">tree,form</field>
           <field name = "title">Python</field>
           <field name = "description">Python Course></field>
         </record>
-        <record model = "course.model" id = "course_demo">
-          <field name = "title">Javascript</field>
-          <field name = "description">Javascript Course></field>
-        </record>
-        <record model = "course.model" id = "course_demo">
-          <field name = "title">HTML5</field>
-          <field name = "description">HTML5 Course></field>
-        </record>
+        <menuitem id="menu_course_demo" parent="course.model" name="Courses" sequence="1"
+                      action="course_demo"/>
+
 <!--
           <record id="object0" model="openacademy.openacademy">
             <field name="name">Object 0</field>
@@ -38,5 +36,6 @@
             <field name="value">40</field>
           </record>
 -->
+      
     </data>
 </odoo>
