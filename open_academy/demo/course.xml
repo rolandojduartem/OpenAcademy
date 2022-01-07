@@ -1,0 +1,9 @@
+<odoo>
+    <record model='course' id='course_demo1'>
+        <field name='title'>Python</field>
+        <field name='description'>Python Course</field>
+      </record>
+      <record model='course' id='course_demo2'>
+        <field name='title'>Odoo</field>
+      </record>
+</odoo>
