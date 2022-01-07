@@ -13,8 +13,11 @@
     'version': '15.0.1.0.0',
     'depends': ['base'],
     'data': [
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'views/course.xml',
+        'data/ir_ui_menu.xml',
     ],
     'demo': [
+        'demo/course.xml',
     ],
 }
