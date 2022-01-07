@@ -8,6 +8,8 @@
           <sheet>
             <group>
               <field name="title"/>
+            </group>
+            <group>
               <field name="description"/>
             </group>
           </sheet>
