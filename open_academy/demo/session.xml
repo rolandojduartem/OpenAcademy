@@ -1,0 +1,14 @@
+<odoo>
+    <record model='session' id='session_demo1'>
+        <field name='name'>Python</field>
+        <field name='start_date'>2022-02-20</field>
+        <field name='duration'>2.5</field>
+        <field name='number_seat'>20</field>
+      </record>
+      <record model='session' id='session_demo2'>
+        <field name='name'>Odoo</field>
+        <field name='start_date'>2022-12-31</field>
+        <field name='duration'>3</field>
+        <field name='number_seat'>15</field>
+      </record>
+</odoo>
