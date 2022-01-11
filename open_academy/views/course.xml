@@ -1,35 +1,45 @@
 <odoo>
-  <data>
-    <record model="ir.ui.view" id="course_view_form">
-      <field name="name">course.view.form</field>
-      <field name="model">course</field>
-      <field name="arch" type="xml">
-        <form>
-          <sheet>
-            <group>
-              <field name="title"/>
-            </group>
-            <group>
+  <record model="ir.ui.view" id="course_view_form">
+    <field name="name">course.view.form</field>
+    <field name="model">course</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="title"/>
+          </group>
+          <notebook>
+            <page>
               <field name="description"/>
-            </group>
-          </sheet>
-        </form>
-      </field>
-    </record>
-    <record model="ir.ui.view" id="course_view_tree">
-      <field name="name">course.view.tree</field>
-      <field name="model">course</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="title"/>
-          <field name="description"/>
-        </tree>
-      </field>
-    </record>
-    <record id='course_action_display_view' model='ir.actions.act_window'>
-      <field name='name'>Course</field>
-      <field name='res_model'>course</field>
-      <field name='view_mode'>tree,form</field>
-    </record>
-  </data>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="course_view_tree">
+    <field name="name">course.view.tree</field>
+    <field name="model">course</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="title"/>
+        <field name="description"/>
+      </tree>
+    </field>
+  </record>
+  <record model="ir.ui.view" id="course_view_search">
+    <field name="name">course.view.search</field>
+    <field name="model">course</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name='title'/>
+        <field name="description"/>
+      </search>
+    </field>
+  </record>
+  <record id='course_action_display_view' model='ir.actions.act_window'>
+    <field name='name'>Course</field>
+    <field name='res_model'>course</field>
+    <field name='view_mode'>tree,form</field>
+  </record>
 </odoo>
