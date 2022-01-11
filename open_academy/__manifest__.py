@@ -21,5 +21,6 @@
     'demo': [
         'demo/course.xml',
         'demo/session.xml',
+
     ],
 }
