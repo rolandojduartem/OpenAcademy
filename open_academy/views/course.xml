@@ -28,10 +28,20 @@
         </tree>
       </field>
     </record>
+    <record model="ir.ui.view" id="course_view_search">
+      <field name="name">course.view.search</field>
+      <field name="model">course</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name='title'/>
+          <field name='description'/>
+        </search>
+      </field>
+    </record>
     <record id='course_action_display_view' model='ir.actions.act_window'>
       <field name='name'>Course</field>
       <field name='res_model'>course</field>
-      <field name='view_mode'>tree,form</field>
+      <field name='view_mode'>tree,form,search</field>
     </record>
   </data>
 </odoo>
