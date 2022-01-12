@@ -6,7 +6,9 @@
       <form>
         <sheet>
           <group>
-            <field name="name"/>
+             <field name="name"/>
+            <field name="course_id"/>
+            <field name="instructor_id"/>
           </group>
           <notebook>
             <page string="Start date">
@@ -29,6 +31,8 @@
     <field name="arch" type="xml">
       <tree>
         <field name="name"/>
+        <field name="course_id"/>
+        <field name="instructor_id"/>
         <field name="start_date"/>
         <field name="duration" widget='timesheet_uom'/>
         <field name="number_seat"/>
@@ -41,6 +45,8 @@
     <field name="arch" type="xml">
       <search>
         <field name='name'/>
+        <field name="course_id"/>
+        <field name="instructor_id"/>
         <field name="start_date"/>
         <field name="duration" widget='timesheet_uom'/>
         <field name="number_seat"/>
