@@ -6,6 +6,7 @@ class Session(models.Model):
     _description = 'Session'
     course_id = fields.Many2one('course', required=True)
     instructor_id = fields.Many2one('res.partner')
+    attendee_ids = fields.Many2many('res.partner')
     name = fields.Char(required=True)
     start_date = fields.Date()
     duration = fields.Float()
