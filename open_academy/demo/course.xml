@@ -1,9 +1,11 @@
 <odoo>
     <record model='course' id='course_demo1'>
-        <field name='title'>Python</field>
-        <field name='description'>Python Course</field>
-      </record>
-      <record model='course' id='course_demo2'>
-        <field name='title'>Odoo</field>
-      </record>
+      <field name='title'>Python</field>
+      <field name='responsible_id' ref='base.user_admin'/>
+      <field name='description'>Python Course</field>
+    </record>
+    <record model='course' id='course_demo2'>
+      <field name='responsible_id' ref='base.user_admin'/>
+      <field name='title'>Odoo</field>
+    </record>
 </odoo>
