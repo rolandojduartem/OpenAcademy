@@ -22,5 +22,6 @@
     'demo': [
         'demo/course.xml',
         'demo/session.xml',
+        'demo/category.xml',
     ],
 }
