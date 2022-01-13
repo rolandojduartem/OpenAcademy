@@ -8,7 +8,7 @@
           <group>
             <field name="name"/>
             <field name="course_id"/>
-            <field name="instructor_id"/>
+            <field name="instructor_id" domain="[('is_instructor', '=', 'True')]"/>
             <field name="attendee_ids"/>
           </group>
           <notebook>
