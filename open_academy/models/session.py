@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class Session(models.Model):
@@ -13,4 +13,10 @@ class Session(models.Model):
     name = fields.Char(required=True)
     start_date = fields.Date()
     duration = fields.Float()
-    number_seat = fields.Integer()
+    number_seat = fields.Integer(default=1, required=True)
+    percentage_taken_seat = fields.Float(compute='_calculate_percentage_taken_seat')
+
+    @api.depends('attendee_ids', 'number_seat')
+    def _calculate_percentage_taken_seat(self):
+        for record in self:
+            record.percentage_taken_seat = (len(record.attendee_ids) / record.number_seat) * 100 if record.number_seat > 0 else 0
