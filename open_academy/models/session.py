@@ -20,3 +20,20 @@ class Session(models.Model):
     def _calculate_percentage_taken_seat(self):
         for record in self:
             record.percentage_taken_seat = (len(record.attendee_ids) / record.number_seat) * 100 if record.number_seat > 0 else 0
+
+    @api.onchange('attendee_ids', 'number_seat')
+    def _onchange_percentage_taken_seat(self):
+        if self.number_seat <= 0:
+            return {
+                'warning':{
+                    'title': 'Value not allowed!',
+                    'message': 'Number seat can not be negative or zero'
+                }
+            }
+        elif len(self.attendee_ids) > self.number_seat:
+            return {
+                'warning': {
+                    'title': 'This course is filled!',
+                    'message': 'Attendee ids can not be greater than Number seat',
+                }
+            }
