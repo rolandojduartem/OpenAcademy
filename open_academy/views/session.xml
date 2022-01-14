@@ -18,8 +18,15 @@
             <page string="Duration">
                 <field name="duration" widget='timesheet_uom'/>
             </page>
-            <page string="Number of seats">
-              <field name="number_seat"/>
+            <page string="Seats">
+              <group>
+                <group>
+                  <field name="number_seat"/>
+                </group>
+                <group>
+                  <field name="percentage_taken_seat" widget="progressbar"/>
+                </group>
+              </group>
             </page>
           </notebook>
         </sheet>
@@ -38,6 +45,7 @@
         <field name="start_date"/>
         <field name="duration" widget='timesheet_uom'/>
         <field name="number_seat"/>
+        <field name="percentage_taken_seat" widget="progressbar"/>
       </tree>
     </field>
   </record>
@@ -53,6 +61,7 @@
         <field name="start_date"/>
         <field name="duration" widget='timesheet_uom'/>
         <field name="number_seat"/>
+        <field name="percentage_taken_seat"/>
       </search>
     </field>
   </record>
