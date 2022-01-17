@@ -2,9 +2,6 @@
     'name': 'Open Academy',
     'summary': """
         Odoo training""",
-    'description': """
-        Odoo training
-    """,
     'application': True,
     'license': 'LGPL-3',
     'author': 'Odoo Community Association (OCA)',
