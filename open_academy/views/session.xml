@@ -107,9 +107,41 @@
       </graph>
     </field>
   </record>
+  <record id="session_view_kanban" model="ir.ui.view">
+    <field name="name">session.view.kanban</field>
+    <field name="model">session</field>
+    <field name="arch" type="xml">
+      <kanban default_group_by="course_id">
+        <field name="course_id"/>
+        <templates>
+          <div><field name="course_id"/></div>
+          <t t-name="kanban-box">
+            <div>
+              <h5>Course ID:</h5>
+              <div><field name="course_id"/></div>
+              <h5>Name:</h5>
+              <div><field name='name'/></div>
+              <h5>Instructor ID:</h5>
+              <div><field name="instructor_id"/></div>
+              <h5>Attendee ID:</h5>
+              <div><field name="attendee_ids"/></div>
+              <h5>Start Date:</h5>
+              <div><field name="start_date"/></div>
+              <h5>Duration:</h5>
+              <div><field name="duration"/></div>
+              <h5>Number Seat:</h5>
+              <div><field name="number_seat"/></div>
+              <h5>Percentage Taken Seat:</h5>
+              <div><field name="percentage_taken_seat" widget="progressbar"/></div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
   <record id='session_action_display_view' model='ir.actions.act_window'>
     <field name='name'>Session</field>
     <field name='res_model'>session</field>
-    <field name='view_mode'>tree,form,calendar,gantt,graph</field>
+    <field name='view_mode'>tree,form,calendar,gantt,graph,kanban</field>
   </record>
 </odoo>
