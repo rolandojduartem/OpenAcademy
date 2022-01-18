@@ -16,6 +16,7 @@ class Session(models.Model):
     duration = fields.Integer()
     number_seat = fields.Integer(default=1, required=True)
     percentage_taken_seat = fields.Float(compute='_compute_percentage_taken_seat')
+    count_attendee_ids = fields.Integer(compute="_compute_count_attendee_ids", store=True)
 
     @api.depends('attendee_ids', 'number_seat')
     def _compute_percentage_taken_seat(self):
@@ -24,6 +25,11 @@ class Session(models.Model):
                 record.percentage_taken_seat = (len(record.attendee_ids) / record.number_seat) * 100
             else:
                 record.percentage_taken_seat = 0
+
+    @api.depends('attendee_ids')
+    def _compute_count_attendee_ids(self):
+        for record in self:
+            record.count_attendee_ids = len(record.attendee_ids)
 
     @api.onchange('attendee_ids', 'number_seat')
     def _onchange_percentage_taken_seat(self):
