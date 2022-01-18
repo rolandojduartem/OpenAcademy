@@ -16,7 +16,7 @@
               <field name="start_date"/>
             </page>
             <page string="Duration">
-                <field name="duration" widget='timesheet_uom'/>
+                <field name="duration"/>
             </page>
             <page string="Seats">
               <group>
@@ -43,7 +43,7 @@
         <field name="instructor_id"/>
         <field name="attendee_ids"/>
         <field name="start_date"/>
-        <field name="duration" widget='timesheet_uom'/>
+        <field name="duration"/>
         <field name="number_seat"/>
         <field name="percentage_taken_seat" widget="progressbar"/>
       </tree>
@@ -59,7 +59,7 @@
           <field name="instructor_id"/>
           <field name="attendee_ids"/>
           <field name="start_date"/>
-          <field name="duration" widget='timesheet_uom'/>
+          <field name="duration"/>
           <field name="number_seat"/>
           <field name="percentage_taken_seat" widget="progressbar"/>
         </calendar>
@@ -75,7 +75,7 @@
         <field name="instructor_id"/>
         <field name="attendee_ids"/>
         <field name="start_date"/>
-        <field name="duration" widget='timesheet_uom'/>
+        <field name="duration"/>
         <field name="number_seat"/>
         <field name="percentage_taken_seat"/>
       </search>

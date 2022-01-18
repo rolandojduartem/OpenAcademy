@@ -4,7 +4,7 @@
       <field name='course_id' ref='course_demo1'/>
       <field name='instructor_id' ref='base.res_partner_1'/>
       <field name='start_date'>2022-02-20</field>
-      <field name='duration'>2.5</field>
+      <field name='duration'>2</field>
       <field name='number_seat'>20</field>
     </record>
     <record model='session' id='session_demo2'>
