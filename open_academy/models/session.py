@@ -13,7 +13,7 @@ class Session(models.Model):
     attendee_ids = fields.Many2many('res.partner')
     name = fields.Char(required=True)
     start_date = fields.Date()
-    duration = fields.Float()
+    duration = fields.Integer()
     number_seat = fields.Integer(default=1, required=True)
     percentage_taken_seat = fields.Float(compute='_compute_percentage_taken_seat')
 
