@@ -37,6 +37,10 @@
         <field name='title'/>
         <field name="responsible_id"/>
         <field name="description"/>
+        <filter name="my_courses" string="My courses" domain="[('responsible_id', '=', uid)]"/>
+        <group string="Group By">
+          <filter name="group_by_responsible" context="{'group_by': 'responsible_id'}"/>
+        </group>
       </search>
     </field>
   </record>
@@ -44,5 +48,6 @@
     <field name='name'>Course</field>
     <field name='res_model'>course</field>
     <field name='view_mode'>tree,form</field>
+    <field name="context">{'search_default_my_courses': True,}</field>
   </record>
 </odoo>
