@@ -49,6 +49,22 @@
       </tree>
     </field>
   </record>
+  <record id="session_view_calendar" model="ir.ui.view">
+    <field name="name">session.view.calendar</field>
+    <field name="model">session</field>
+    <field name="arch" type="xml">
+        <calendar date_start="start_date" hide_time="true" mode="month" quick_add="True">
+          <field name="name"/>
+          <field name="course_id"/>
+          <field name="instructor_id"/>
+          <field name="attendee_ids"/>
+          <field name="start_date"/>
+          <field name="duration" widget='timesheet_uom'/>
+          <field name="number_seat"/>
+          <field name="percentage_taken_seat" widget="progressbar"/>
+        </calendar>
+    </field>
+  </record>
   <record model="ir.ui.view" id="session_view_search">
     <field name="name">session.view.search</field>
     <field name="model">session</field>
@@ -68,6 +84,6 @@
   <record id='session_action_display_view' model='ir.actions.act_window'>
     <field name='name'>Session</field>
     <field name='res_model'>session</field>
-    <field name='view_mode'>tree,form</field>
+    <field name='view_mode'>tree,form,calendar</field>
   </record>
 </odoo>
