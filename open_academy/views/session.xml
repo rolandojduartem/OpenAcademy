@@ -37,7 +37,7 @@
     <field name="name">session.view.tree</field>
     <field name="model">session</field>
     <field name="arch" type="xml">
-      <tree>
+      <tree decoration-info='duration&lt;=5' decoration-danger='duration&gt;=15'>
         <field name="name"/>
         <field name="course_id"/>
         <field name="instructor_id"/>
