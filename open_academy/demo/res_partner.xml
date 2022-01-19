@@ -1,0 +1,22 @@
+<odoo>
+    <record id="res_partner_john_smith" model="res.partner">
+        <field name="name">John Smith(USER)</field>
+        <field name="company_name">YourCompany</field>
+        <field name="street">250 Executive Park Blvd, Suite 3400</field>
+        <field name="city">San Francisco</field>
+        <field name="zip">94134</field>
+        <field name="phone">+1 (650) 555-0111 </field>
+        <field name="email">info@yourcompany.example.com</field>
+        <field name="website">www.example.com</field>
+    </record>
+    <record id="res_partner_king_mcdonald" model="res.partner">
+        <field name="name">King McDonald(MANAGER)</field>
+        <field name="company_name">YourCompany</field>
+        <field name="street">250 Executive Park Blvd, Suite 3400</field>
+        <field name="city">San Francisco</field>
+        <field name="zip">94134</field>
+        <field name="phone">+1 (650) 555-0111 </field>
+        <field name="email">info@yourcompany.example.com</field>
+        <field name="website">www.example.com</field>
+    </record>
+</odoo>
