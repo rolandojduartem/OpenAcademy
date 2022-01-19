@@ -1,0 +1,14 @@
+<odoo>
+    <record id="res_users_john_smith" model="res.users">
+        <field name="partner_id" ref="res_partner_john_smith"/>
+        <field name="login">hello</field>
+        <field name="password">hello</field>
+        <field name="groups_id" eval="[Command.set([ref('base.group_user'), ref('group_open_academy_user'),])]"/>
+    </record>
+    <record id="res_users_king_mcdonald" model="res.users">
+        <field name="partner_id" ref="res_partner_king_mcdonald"/>
+        <field name="login">bye</field>
+        <field name="password">bye</field>
+        <field name="groups_id" eval="[Command.set([ref('base.group_user'),ref('group_open_academy_manager'),])]"/>
+    </record>
+</odoo>
