@@ -11,6 +11,7 @@
     'depends': ['base'],
     'data': [
         'data/res_group.xml',
+        'data/ir_rule.xml',
         'security/ir.model.access.csv',
         'views/partner.xml',
         'views/course.xml',
