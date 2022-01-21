@@ -54,3 +54,9 @@ class Session(models.Model):
         for record in self:
             if record.instructor_id in record.attendee_ids:
                 raise ValidationError(_('Instructor can not be on attendee field'))
+
+    @api.constrains('number_seat', 'attendee_ids')
+    def _check_attendee_number_seat(self):
+        for record in self:
+            if record.number_seat < len(record.attendee_ids):
+                raise ValidationError(_('The %s session can NOT have more attendees') % record.name)
