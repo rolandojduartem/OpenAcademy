@@ -6,12 +6,12 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="session_id"/>
+                        <field name="session_ids"/>
                         <field name="attendee_ids"/>
                     </group>
                     <footer>
-                        <button name="save_this_session"
-                                string="Save this session"
+                        <button name="action_register_attendees_to_sessions"
+                                string="Assign attendees"
                                 type="object"
                                 class="btn btn-primary o_form_button_edit"/>
                     </footer>
@@ -25,6 +25,6 @@
         <field name="view_mode">form</field>
         <field name="target">new</field>
         <field name="binding_model_id" ref="model_session"/>
-        <field name="context">{'default_session_id': active_id,}</field>
+        <field name="context">{'default_session_ids': [(6, False, active_ids)]}</field>
     </record>
 </odoo>
