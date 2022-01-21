@@ -9,6 +9,12 @@
                         <field name="session_id"/>
                         <field name="attendee_ids"/>
                     </group>
+                    <footer>
+                        <button name="save_this_session"
+                                string="Save this session"
+                                type="object"
+                                class="btn btn-primary o_form_button_edit"/>
+                    </footer>
                 </sheet>
             </form>
         </field>
