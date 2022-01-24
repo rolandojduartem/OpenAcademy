@@ -18,6 +18,8 @@
         'views/session.xml',
         'data/ir_ui_menu.xml',
         'wizards/assign_attendee_sessions.xml',
+        'report/session_templates.xml',
+        'report/session_reports.xml',
     ],
     'demo': [
         'demo/category.xml',

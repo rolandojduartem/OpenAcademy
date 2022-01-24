@@ -1,5 +1,6 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+from datetime import timedelta
 
 
 class Session(models.Model):
@@ -12,11 +13,17 @@ class Session(models.Model):
     )
     attendee_ids = fields.Many2many('res.partner')
     name = fields.Char(required=True)
-    start_date = fields.Date()
-    duration = fields.Integer()
+    start_date = fields.Date(default=lambda self: fields.Date.today())
+    end_date = fields.Date(compute='_compute_end_date')
+    duration = fields.Integer(default=0)
     number_seat = fields.Integer(default=1, required=True)
     percentage_taken_seat = fields.Float(compute='_compute_percentage_taken_seat')
     count_attendee_ids = fields.Integer(compute="_compute_count_attendee_ids", store=True)
+
+    @api.depends('start_date', 'duration')
+    def _compute_end_date(self):
+        for record in self:
+            record.end_date = record.start_date + timedelta(days=record.duration)
 
     @api.depends('attendee_ids', 'number_seat')
     def _compute_percentage_taken_seat(self):
