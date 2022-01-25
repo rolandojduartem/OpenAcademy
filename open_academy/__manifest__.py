@@ -8,7 +8,10 @@
     'website': 'https://github.com/rolandojduartem/OpenAcademy',
     'category': 'Uncategorized',
     'version': '15.0.1.0.0',
-    'depends': ['base'],
+    'depends': [
+        'base',
+        'board',
+    ],
     'data': [
         'data/res_group.xml',
         'data/ir_rule.xml',
@@ -16,6 +19,7 @@
         'views/partner.xml',
         'views/course.xml',
         'views/session.xml',
+        'report/open_academy_report_views.xml',
         'data/ir_ui_menu.xml',
         'wizards/assign_attendee_sessions.xml',
         'report/session_templates.xml',
