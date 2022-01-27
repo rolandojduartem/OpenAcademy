@@ -1,4 +1,5 @@
 import xmlrpc.client
+import logging
 
 
 class RPC():
@@ -35,10 +36,10 @@ class RPC():
             {'fields': fields}
         )
         for session in sessions:
-            print(session)
+            logging.info(session)
 
     def _create(self):
-        print("the course ids are:")
+        logging.info("the course ids are:")
         self._view("course")
         main_fields = ["name", "course_id", "number_seat"]
         input_new_data = input(
@@ -58,7 +59,7 @@ class RPC():
             [create_data],
         )
         success_message = "Session %s was created!" % create_data['name']
-        print(success_message)
+        logging.info(success_message)
 
     def run(self):
         while True:
